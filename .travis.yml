@@ -1,0 +1,30 @@
+language: python
+python: 
+- 3.4
+
+
+#installation
+  #before install
+
+  #install
+install:
+  - pip install -r requirements.txt
+
+#script
+  #before_script
+  #script
+  
+script:
+  - mkdir ShortStory
+  - touch KKK
+  - echo 5
+
+#after script
+  #after sucess
+  #after failure
+
+#deploy
+  #before deploy
+  #deploy
+  #after deploy
+  
