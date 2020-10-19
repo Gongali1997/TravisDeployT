@@ -6,20 +6,10 @@ python:
   #before_script
   #script
   
-script:
-  - mkdir ShortStory
-  - touch KKK
-  - echo 5
-
-#after script
-  #after sucess
-  #after failure
-before_deploy: echo start
-deploy:
-  provider: pages
-  skip_clearup: true
-  github_token: $GITHUB_TOKEN
-  keep_history: true
-  on:
-    branch: main
-after_deploy: echo finish
+jobs:
+  include:
+    - stage: build
+      script: echo 5
+    - script: echo "test"
+    - stage: deploy
+      script: echo "deploy"
