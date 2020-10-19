@@ -13,3 +13,6 @@ jobs:
     - script: echo "test"
     - stage: deploy
       script: echo "deploy"
+      name: "deploy1"
+      script: echo "deploy again"
+      name: "deploy2"
