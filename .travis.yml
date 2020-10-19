@@ -14,11 +14,7 @@ script:
 #after script
   #after sucess
   #after failure
-
-#deploy
-  #before deploy
-  #deploy
-  #after deploy
+before_deploy: echo start
 deploy:
   provider: pages
   skip_clearup: true
@@ -26,3 +22,4 @@ deploy:
   keep_history: true
   on:
     branch: main
+after_deploy: echo finish
