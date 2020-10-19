@@ -2,13 +2,14 @@ language: python
 python: 
 - 3.4
 
-#script
-  #before_script
-  #script
+env:
+  - QA
+  - PROD
   
 jobs:
   include:
     - stage: build
+      if: branch = main
       script: echo 5
     - script: echo "test"
     - stage: deploy
