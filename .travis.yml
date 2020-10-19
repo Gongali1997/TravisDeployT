@@ -27,4 +27,10 @@ script:
   #before deploy
   #deploy
   #after deploy
-  
+deploy:
+  provider: pages
+  skip_clearup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master
